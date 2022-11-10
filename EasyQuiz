@@ -1,0 +1,90 @@
+package QuizCoursework.lib;
+
+import java.util.Scanner;
+
+public class EasyQuiz {
+
+    
+   
+    public static String Subject;
+    public static String Topic;
+    public static String Difficulty;
+    public static int AnswerMaths;
+    
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Welcome to EasyQuiz!");
+    System.out.println("Please select a subject:");
+    System.out.println("Maths");
+    System.out.println("Computing");
+    Subject = sc.nextLine();
+
+    if (Subject.equals ("Maths")) {
+    System.out.println("Please choose a Maths topic:");
+    System.out.println("Addition");
+    System.out.println("Subtraction");
+    System.out.println("Algebra");
+    Topic = sc.nextLine();
+
+    if (Topic.equals ("Addition")) {   
+    System.out.println("What difficulty of Addition would you like to try?");
+    System.out.println("Easy");
+    System.out.println("Normal");
+    System.out.println("Hard");
+    System.out.println("Advanced");
+    Difficulty = sc.nextLine();
+    
+    if (Difficulty.equals ("Easy")) {
+        for (int Question = 1; Question < 11; Question++) {
+        int Number1 = (int) (Math.random() * 10) + 1;
+        int Number2 = (int) (Math.random() * 10) + 1;
+        int AdditionMaths = Number1 + Number2;
+        System.out.println(Number1 + "+" + Number2);
+        int AnswerMaths = sc.nextInt();
+        
+            if (AnswerMaths == AdditionMaths) {
+                System.out.println("Good job! That is the correct answer!");
+            } else {
+                System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + AdditionMaths);
+            }
+            }
+        }
+    
+    } else {
+            if (Topic.equals ("Subtraction")) {
+                System.out.println("What difficulty of Subtraction would you like to try?");
+                System.out.println("Easy");
+                System.out.println("Normal");
+                System.out.println("Hard");
+                System.out.println("Advanced");
+                Difficulty = sc.nextLine();
+                
+                if (Difficulty.equals ("Easy")) {
+                    for (int Question = 1; Question < 11; Question++) {
+                    int Number1 = (int) (Math.random() * 10) + 1;
+                    int Number2 = (int) (Math.random() * 10) + 1;
+                    int SubtractionMaths = Number1 - Number2;
+                    System.out.println(Number1 + "-" + Number2);
+                    int AnswerMaths = sc.nextInt();
+                    
+                        if (AnswerMaths == SubtractionMaths) {
+                            System.out.println("Good job! That is the correct answer!");
+                        } else {
+                            System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + SubtractionMaths);
+                        }
+                        }
+                    }
+            } else {
+        if (Subject.equals ("Computing")) {
+            System.out.println("Test 2");
+        } else {
+            System.out.println("Please choose one of subjects provided.");
+
+            sc.close();
+        }
+    }
+    }
+}
+}
+}
