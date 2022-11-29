@@ -4,257 +4,85 @@ import java.util.Scanner;
 
 public class EasyQuiz {
 
+    public static String Subject; // add a comment to describe why you need this variable
     
-   
-    public static String Subject;
     public static String Topic;
-    public static String AddDifficulty;
-    public static String SubDifficulty;
+    
+    public static String Difficulty;
+    
     public static int AnswerMaths;
     
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
-    
-    System.out.println("Welcome to EasyQuiz!");
-    System.out.println("Please select a subject:");
-    System.out.println("Maths");
-    System.out.println("Computing");
-    Subject = sc.nextLine();
 
-    if (Subject.equals ("Maths")) {
-    System.out.println("Please choose a Maths topic:");
-    System.out.println("Addition");
-    System.out.println("Subtraction");
-    System.out.println("Multiplication");
-    Topic = sc.nextLine();
-
-    if (Topic.equals ("Addition")) {   
-    System.out.println("What difficulty of Addition would you like to try?");
-    System.out.println("Easy");
-    System.out.println("Normal");
-    System.out.println("Hard");
-    System.out.println("Advanced");
-    AddDifficulty = sc.nextLine();
-
-    if (AddDifficulty.equals ("Easy")) {
-        for (int Question = 1; Question < 11; Question++) {
-        int Number1 = (int) (Math.random() * 10) + 1;
-        int Number2 = (int) (Math.random() * 10) + 1;
-        int AdditionMaths = Number1 + Number2;
-        System.out.println(Number1 + "+" + Number2);
-        int AnswerMaths = sc.nextInt();
+        // display options menu
+        System.out.println("*** Welcome to EasyQuiz! ***");
+        System.out.println("****************************");
+        System.out.println("- Maths");
+        System.out.println("- Computing");
+        System.out.println("");
         
-            if (AnswerMaths == AdditionMaths) {
-                System.out.println("Good job! That is the correct answer!");
-            } else {
-                System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + AdditionMaths);
-            }
-            }
-        } else { if (AddDifficulty.equals ("Normal")) {
-            for (int Question = 1; Question < 11; Question++) {
-            int Number1 = (int) (Math.random() * 20) + 1;
-            int Number2 = (int) (Math.random() * 20) + 1;
-            int AdditionMaths = Number1 + Number2;
-            System.out.println(Number1 + "+" + Number2);
-            int AnswerMaths = sc.nextInt();
-            
-                if (AnswerMaths == AdditionMaths) {
-                    System.out.println("Good job! That is the correct answer!");
-                } else {
-                    System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + AdditionMaths);
-                }
-                }
-
-        } else { if (AddDifficulty.equals ("Hard")) {
-            for (int Question = 1; Question < 11; Question++) {
-            int Number1 = (int) (Math.random() * 50) + 1;
-            int Number2 = (int) (Math.random() * 50) + 1;
-            int AdditionMaths = Number1 + Number2;
-            System.out.println(Number1 + "+" + Number2);
-            int AnswerMaths = sc.nextInt();
-            
-                if (AnswerMaths == AdditionMaths) {
-                    System.out.println("Good job! That is the correct answer!");
-                } else {
-                    System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + AdditionMaths);
-                }
-                }
-
-        } else { if (AddDifficulty.equals ("Advanced")) {
-            for (int Question = 1; Question < 11; Question++) {
-            int Number1 = (int) (Math.random() * 100) + 1;
-            int Number2 = (int) (Math.random() * 100) + 1;
-            int AdditionMaths = Number1 + Number2;
-            System.out.println(Number1 + "+" + Number2);
-            int AnswerMaths = sc.nextInt();
-            
-                if (AnswerMaths == AdditionMaths) {
-                    System.out.println("Good job! That is the correct answer!");
-                } else {
-                    System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + AdditionMaths);
-                }
-                }
-            }
-        }
-    }
-}
-}
-
-if (Topic.equals ("Subtraction")) {
-                System.out.println("What difficulty of Subtraction would you like to try?");
-                System.out.println("Easy");
-                System.out.println("Normal");
-                System.out.println("Hard");
-                System.out.println("Advanced");
-                SubDifficulty = sc.nextLine();
-                
-                if (SubDifficulty.equals ("Easy")) {
-                    for (int Question = 1; Question < 11; Question++) {
-                    int Number1 = (int) (Math.random() * 10) + 1;
-                    int Number2 = (int) (Math.random() * 10) + 1;
-                    int SubtractionMaths = Number1 - Number2;
-                    System.out.println(Number1 + "-" + Number2);
-                    int AnswerMaths = sc.nextInt();
-                    
-                        if (AnswerMaths == SubtractionMaths) {
-                            System.out.println("Good job! That is the correct answer!");
-                        } else {
-                            System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + SubtractionMaths);
-                        }
-                        }
-                    } else { 
-                if (SubDifficulty.equals ("Normal")) {
-                    for (int Question = 1; Question < 11; Question++) {
-                    int Number1 = (int) (Math.random() * 20) + 1;
-                    int Number2 = (int) (Math.random() * 20) + 1;
-                    int SubtractionMaths = Number1 - Number2;
-                    System.out.println(Number1 + "-" + Number2);
-                    int AnswerMaths = sc.nextInt();
-                    
-                        if (AnswerMaths == SubtractionMaths) {
-                            System.out.println("Good job! That is the correct answer!");
-                        } else {
-                            System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + SubtractionMaths);
-                        }
-                        }
-                    } else {
-                        if (SubDifficulty.equals ("Hard")) {
-                            for (int Question = 1; Question < 11; Question++) {
-                            int Number1 = (int) (Math.random() * 50) + 1;
-                            int Number2 = (int) (Math.random() * 50) + 1;
-                            int SubtractionMaths = Number1 - Number2;
-                            System.out.println(Number1 + "-" + Number2);
-                            int AnswerMaths = sc.nextInt();
+        // prompt the user to input a subject e.g. "Maths"
+        System.out.println("Please select a subject:");
+        Subject = sc.nextLine();
+        
+        // a switch case statement can look more readable
+        switch(Subject) {
+            case "Maths": {  
+                      System.out.println("-- Please choose a Math topic: Addition, Subtraction or Multiplication.");
+                      Topic = sc.nextLine();
+                      
+                      System.out.println("-- What difficulty would you like to try? Easy, Normal, Hard or Advanced.");
+                      Difficulty = sc.nextLine();
+                      
+                      // TODO: Let us test the concept with one question first, then we can always add a loop later...
+                      if (Topic.equals("Addition")) {
+                            int correctAnswer = randomAdditionQuestion(Difficulty);
+                            int userAnswer = sc.nextInt();
                             
-                                if (AnswerMaths == SubtractionMaths) {
-                                    System.out.println("Good job! That is the correct answer!");
-                                } else {
-                                    System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + SubtractionMaths);
-                                }
-                                }
-                            } 
-                            if (SubDifficulty.equals ("Advanced")) {
-                                for (int Question = 1; Question < 11; Question++) {
-                                int Number1 = (int) (Math.random() * 100) + 1;
-                                int Number2 = (int) (Math.random() * 100) + 1;
-                                int SubtractionMaths = Number1 - Number2;
-                                System.out.println(Number1 + "-" + Number2);
-                                int AnswerMaths = sc.nextInt();
-                                
-                                    if (AnswerMaths == SubtractionMaths) {
-                                        System.out.println("Good job! That is the correct answer!");
-                                    } else {
-                                        System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + SubtractionMaths);
-                                    }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                if (Topic.equals ("Multiplication")) {
-                System.out.println("What difficulty of Multiplication would you like to try?");
-                System.out.println("Easy");
-                System.out.println("Normal");
-                System.out.println("Hard");
-                System.out.println("Advanced");
-                AddDifficulty = sc.nextLine();
-                
-                if (AddDifficulty.equals ("Easy")) {
-                    for (int Question = 1; Question < 11; Question++) {
-                    int Number1 = (int) (Math.random() * 5) + 1;
-                    int Number2 = (int) (Math.random() * 5) + 1;
-                    int MultiplicationMaths = Number1*Number2;
-                    System.out.println(Number1 + "*" + Number2);
-                    int AnswerMaths = sc.nextInt();
-                    
-                        if (AnswerMaths == MultiplicationMaths) {
-                            System.out.println("Good job! That is the correct answer!");
-                        } else {
-                            System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + MultiplicationMaths);
-                        }
-                        }
-                    } else {
-                        if (AddDifficulty.equals ("Normal")) {
-                        for (int Question = 1; Question < 11; Question++) {
-                        int Number1 = (int) (Math.random() * 10) + 1;
-                        int Number2 = (int) (Math.random() * 10) + 1;
-                        int MultiplicationMaths = Number1*Number2;
-                        System.out.println(Number1 + "*" + Number2);
-                        int AnswerMaths = sc.nextInt();
-                        
-                            if (AnswerMaths == MultiplicationMaths) {
-                                System.out.println("Good job! That is the correct answer!");
+                            if (userAnswer == correctAnswer) {
+                                System.out.println("Good job! You got the correct answer");
                             } else {
-                                System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + MultiplicationMaths);
-                            }
-                            }
-                        } else {
-                        if (AddDifficulty.equals ("Hard")) {
-                        for (int Question = 1; Question < 11; Question++) {
-                        int Number1 = (int) (Math.random() * 15) + 1;
-                        int Number2 = (int) (Math.random() * 20) + 1;
-                        int MultiplicationMaths = Number1*Number2;
-                        System.out.println(Number1 + "*" + Number2);
-                        int AnswerMaths = sc.nextInt();
-                    
-                            if (AnswerMaths == MultiplicationMaths) {
-                            System.out.println("Good job! That is the correct answer!");
-                            } else {
-                                System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + MultiplicationMaths);
-                            }
-                        }
-                    } else { 
-                        if (AddDifficulty.equals ("Advanced")) {
-                        for (int Question = 1; Question < 11; Question++) {
-                        int Number1 = (int) (Math.random() * 20) + 1;
-                        int Number2 = (int) (Math.random() * 20) + 1;
-                        int MultiplicationMaths = Number1*Number2;
-                        System.out.println(Number1 + "*" + Number2);
-                        int AnswerMaths = sc.nextInt();
-                
-                    if (AnswerMaths == MultiplicationMaths) {
-                        System.out.println("Good job! That is the correct answer!");
-                    } else {
-                        System.out.println("Nice Try, but the answer is incorrect. The correct answer is " + MultiplicationMaths);
-                    }
-                }
-            } 
+                                System.out.println("Nice try. The correct answer is: " + correctAnswer);
+                            }  
+                      }
+                      break;
+            }
+            case "Computing": {
+                  break;
+            }
+            default: {
+                System.out.println("We do not support that subject yet. Sorry!");
+            }
         }
     }
- }
-                    } else {
-                    System.out.println ("Please select a valid topic.");
-                    }
-                    
-                    
-                    } else { 
-                        if (Subject.equals ("Computing")) {
-                        System.out.println("Test 2");
-                    } else {
-                        System.out.println("Please choose one of subjects provided.");
-
-        sc.close();
+    
+    public static int randomAdditionQuestion(String difficulty) {
+         int multiplier = 5;
+         int answer = 0;
+         if (difficulty.equals("Normal")) multiplier = 10;
+         if (difficulty.equals("Hard")) multiplier = 15;
+         if (difficulty.equals("Advanced")) multiplier = 20;
+         
+         int Number1 = (int) (Math.random() * multiplier) + 1;
+         int Number2 = (int) (Math.random() * multiplier) + 1;
+         answer = Number1 + Number2;
+         
+         // display the random question
+         System.out.println("Calculate: " Number1 + "+" + Number2 + ".");
+         
+         return answer; // returns the correct answer to the question
     }
-}
-}
+    
+    public static int randomSubtractionQuestion(String level) {
+
+    }
+
+    public static int randomMultiplicationQuestion(String level) {
+    
+    }
+
+    public static void advancedAdditionQuiz() {
+
+    }
 }
