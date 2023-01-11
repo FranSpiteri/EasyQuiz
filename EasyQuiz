@@ -45,9 +45,31 @@ public class EasyQuiz {
                             } else {
                                 System.out.println("Nice try. The correct answer is: " + correctAnswer);
                             }  
+                      } else {
+                      if (Topic.equals("Subtraction")) {
+                            int correctAnswer = randomSubtractionQuestion(Difficulty);
+                            int userAnswer = sc.nextInt();
+
+                            if (userAnswer == correctAnswer) {
+                                System.out.println("Good job! You got the correct answer");
+                            } else {
+                                System.out.println("Nice try. The correct answer is: " + correctAnswer);
+                            }
+                      } else {
+                        if (Topic.equals("Multiplication")) {
+                            int correctAnswer = randomMultiplicationQuestion(Difficulty);
+                            int userAnswer = sc.nextInt();
+                            
+                            if (userAnswer == correctAnswer) {
+                                System.out.println("Good job! You got the correct answer");
+                            } else {
+                                System.out.println("Nice try. The correct answer is: " + correctAnswer);
+                            }  
+                      }
                       }
                       break;
             }
+        }
             case "Computing": {
                   break;
             }
@@ -61,25 +83,52 @@ public class EasyQuiz {
          int multiplier = 5;
          int answer = 0;
          if (difficulty.equals("Normal")) multiplier = 10;
-         if (difficulty.equals("Hard")) multiplier = 15;
-         if (difficulty.equals("Advanced")) multiplier = 20;
+         if (difficulty.equals("Hard")) multiplier = 50;
+         if (difficulty.equals("Advanced")) multiplier = 100;
          
          int Number1 = (int) (Math.random() * multiplier) + 1;
          int Number2 = (int) (Math.random() * multiplier) + 1;
          answer = Number1 + Number2;
          
          // display the random question
-         System.out.println("Calculate: " Number1 + "+" + Number2 + ".");
+         System.out.println("Calculate: " + Number1 + "+" + Number2 + ".");
          
          return answer; // returns the correct answer to the question
     }
     
-    public static int randomSubtractionQuestion(String level) {
+    public static int randomSubtractionQuestion(String difficulty) {
+        int multiplier = 5;
+         int answer = 0;
+         if (difficulty.equals("Normal")) multiplier = 10;
+         if (difficulty.equals("Hard")) multiplier = 50;
+         if (difficulty.equals("Advanced")) multiplier = 100;
+         
+         int Number1 = (int) (Math.random() * multiplier) + 1;
+         int Number2 = (int) (Math.random() * multiplier) + 1;
+         answer = Number1 - Number2;
+         
+         // display the random question
+         System.out.println("Calculate: " + Number1 + "-" + Number2 + ".");
+         
+         return answer; // returns the correct answer to the question
 
     }
 
-    public static int randomMultiplicationQuestion(String level) {
-    
+    public static int randomMultiplicationQuestion(String difficulty) {
+        int multiplier = 5;
+         int answer = 0;
+         if (difficulty.equals("Normal")) multiplier = 5;
+         if (difficulty.equals("Hard")) multiplier = 10;
+         if (difficulty.equals("Advanced")) multiplier = 20;
+         
+         int Number1 = (int) (Math.random() * multiplier) + 1;
+         int Number2 = (int) (Math.random() * multiplier) + 1;
+         answer = Number1 * Number2;
+         
+         // display the random question
+         System.out.println("Calculate: " + Number1 + "*" + Number2 + ".");
+
+         return answer; // returns the correct answer to the question
     }
 
     public static void advancedAdditionQuiz() {
