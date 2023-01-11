@@ -1,0 +1,13 @@
+package QuizCoursework.src;
+
+import java.util.Scanner;
+
+public class Topic {
+
+    Scanner sc = new Scanner(System.in);
+
+    String difficulty = sc.nextLine();
+    char operator;
+    String name = sc.nextLine();
+
+}
